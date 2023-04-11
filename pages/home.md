@@ -15,3 +15,5 @@ See the demo website for instructions:
 - [Installation]({{ '/docs/installation/' | relative_url }})
 - [Configuration]({{ '/docs/configuration/' | relative_url }})
 - [Markdown]({{ '/docs/markdown/' | relative_url }})
+
+<iframe src="https://www.youtube-nocookie.com/embed/aPwndqsmaGk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
