@@ -1,0 +1,14 @@
+<div class="card w-96 glass">
+  <figure>
+    <a href="{{ include.video_link }}" data-turbolinks="false" data-daisyjs-trigger="modal">
+      <img src="{{ include.thumbnail }}" alt="{{ include.title }}"/>
+    </a>
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title">{{ include.title }}</h2>
+    <p>{{ include.description }}</p>
+    <div class="card-actions justify-end">
+      <button class="btn btn-primary" data-turbolinks="false" data-daisyjs-trigger="modal">Watch now!</button>
+    </div>
+  </div>
+</div>
