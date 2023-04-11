@@ -1,3 +1,67 @@
+
+<nav class="slds-navbar slds-navbar_inverse" role="navigation">
+  <div class="slds-container slds-container_fluid">
+    <div class="slds-grid slds-grid_vertical-align-center">
+      <div class="slds-col slds-has-flexi-truncate">
+        <div class="slds-grid slds-grid_vertical-align-center slds-grow">
+          <a href="{{'/' | relative_url }}" class="slds-brand slds-m-left_x-small slds-p-right_x-small">
+            {% if site.logo %}
+              <img src="{{ site.logo | relative_url }}" alt="{{ site.title }}" height="28px" />
+            {% endif %}
+            <span class="slds-brand__text">{{ site.title }}</span>
+          </a>
+        </div>
+      </div>
+      {% if page.navigation and site.data[page.navigation] %}
+        {% assign navigation = site.data[page.navigation] %}
+      {% elsif site.data.navigation %}
+        {% assign navigation = site.data.navigation %}
+      {% endif %}
+      {% if navigation %}
+        <div class="slds-col slds-no-flex slds-grid slds-align-middle">
+          <div class="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_x-small">
+            <button class="slds-button slds-button_icon slds-button_icon-border-filled" aria-haspopup="true" title="Show More">
+              <svg class="slds-button__icon" aria-hidden="true">
+                <use xlink:href="{{ 'assets/icons/utility-sprite/svg/symbols.svg#down' | relative_url }}" />
+              </svg>
+              <span class="slds-assistive-text">Show More</span>
+            </button>
+            <div class="slds-dropdown slds-dropdown_right">
+              <ul class="slds-dropdown__list" role="menu">
+                {% for item in navigation %}
+                  {% if item.menu %}
+                    <li class="slds-dropdown__item slds-dropdown__header" role="separator">{{ item.text }}</li>
+                    {% for subitem in item.menu %}
+                      {% if subitem.href %}
+                        {% if subitem.text contains '' %}
+                          {% assign subitem_text = subitem.text %}
+                        {% else %}
+                          {% assign subitem_text = site.pages | where: 'url', subitem.href | map: 'title' | first %}
+                        {% endif %}
+                        <li class="slds-dropdown__item{% if subitem.href == page.url %} slds-is-active{% endif %}" role="presentation">
+                          <a href="{{ subitem.href | relative_url }}"{% if subitem.new_window %} target="_blank"{% endif %} role="menuitem">{{ subitem_text }}</a>
+                        </li>
+                      {% elsif subitem.text contains '---' %}
+                        <li class="slds-dropdown__item slds-has-divider_top-space" role="presentation"></li>
+                      {% else %}
+                        <li class="slds-dropdown__item slds-dropdown__header" role="presentation">{{ subitem.text }}</li>
+                      {% endif %}
+                    {% endfor %}
+                  {% else %}
+                    {% if item.text contains '' %}
+                      {% assign item_text = item.text %}
+                    {% else %}
+                      {% assign item_text = site.pages | where: 'url', item.href | map: 'title' | first %}
+                    {% endif %}
+                    <li class="slds-dropdown__item{% if item.href == page.url %} slds-is-active{% endif %}" role="presentation">
+                      <a href="{{ item.href | relative_url }}"{% if item.new_window %} target="_blank"{% endif %} role="menuitem">{{ subitem_text }}</a>
+                    </li>
+                    </ul>
+                    </div>
+  </nav>
+
+<!-- 
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light" id="main-nav">
   <div class="container">
     <a class="navbar-brand d-flex align-items-center" href="{{'/' | relative_url }}">
@@ -55,4 +119,4 @@
       </div>
     {% endif %}
   </div>
-</nav>
+</nav> -->
