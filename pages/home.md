@@ -15,6 +15,9 @@ permalink: /
 
 See the demo website for instructions:
 
+{% include youtube-video.html video_title="My Awesome Video" video_url="https://www.youtube.com/watch?v=dQw4w9WgXcQ" %}
+
+
 - [Installation]({{ '/docs/installation/' | relative_url }})
 - [Configuration]({{ '/docs/configuration/' | relative_url }})
 - [Markdown]({{ '/docs/markdown/' | relative_url }})

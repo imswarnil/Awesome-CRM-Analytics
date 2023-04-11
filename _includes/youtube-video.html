@@ -1,14 +1,14 @@
-<div class="card w-96 glass">
-  <figure>
-    <a href="{{ include.video_link }}" data-turbolinks="false" data-daisyjs-trigger="modal">
-      <img src="{{ include.thumbnail }}" alt="{{ include.title }}"/>
-    </a>
-  </figure>
+<div class="card w-96 bg-base-100 shadow-xl">
+  <iframe width="100%" height="315" src="{{ video_url }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   <div class="card-body">
-    <h2 class="card-title">{{ include.title }}</h2>
-    <p>{{ include.description }}</p>
+    <h2 class="card-title">
+      {{ video_title }}
+      <div class="badge badge-secondary">NEW</div>
+    </h2>
+    <p>If a dog chews shoes whose shoes does he choose?</p>
     <div class="card-actions justify-end">
-      <button class="btn btn-primary" data-turbolinks="false" data-daisyjs-trigger="modal">Watch now!</button>
+      <div class="badge badge-outline">Fashion</div>
+      <div class="badge badge-outline">Products</div>
     </div>
   </div>
 </div>
