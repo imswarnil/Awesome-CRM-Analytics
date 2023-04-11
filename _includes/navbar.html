@@ -1,116 +1,59 @@
-<nav class="slds-navbar slds-navbar_inverse slds-theme_brand" role="navigation">
-  <div class="slds-container">
+<nav class="slds-navbar slds-navbar_vertical slds-shadow_medium" role="navigation">
+  <div class="slds-container slds-container_fluid">
     <div class="slds-grid slds-grid_align-spread">
-      <div class="slds-navbar__brand">
-        <a href="{{'/' | relative_url }}" class="slds-logo slds-logo_inverse" title="{{ site.title }}">
+      <div class="slds-nav-vertical slds-nav-medium slds-wrap">
+        <a class="slds-nav-vertical__action" href="{{'/' | relative_url }}">
           {% if site.logo %}
-            <img src="{{ site.logo | relative_url }}" alt="{{ site.title }}" />
+            <img class="slds-icon slds-icon-text-default slds-icon_x-small slds-align-middle me-1" src="{{ site.logo | relative_url }}" alt="{{ site.title }}">
           {% endif %}
-          <span class="slds-assistive-text">{{ site.title }}</span>
+          <span class="slds-align-middle">{{ site.title }}</span>
         </a>
-      </div>
-      {% if page.navigation and site.data[page.navigation] %}
-        {% assign navigation = site.data[page.navigation] %}
-      {% elsif site.data.navigation %}
-        {% assign navigation = site.data.navigation %}
-      {% endif %}
-      {% if navigation %}
-        <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-inverse slds-button_icon-small slds-m-right_small slds-hide-medium slds-hide-large" aria-controls="navbar-menu" aria-expanded="false" aria-haspopup="true">
-          <svg class="slds-button__icon" aria-hidden="true">
-            <use xlink:href="{{ site.baseurl }}/assets/icons/utility-sprite/svg/symbols.svg#menu" />
-          </svg>
-          <span class="slds-assistive-text">Toggle Navigation</span>
-        </button>
-        <div class="slds-grid slds-grid_vertical-align-center slds-collapse slds-show_medium slds-show_large" id="navbar-menu">
-          <ul class="slds-navbar__nav slds-list_horizontal slds-wrap">
+        {% if page.navigation and site.data[page.navigation] %}
+          {% assign navigation = site.data[page.navigation] %}
+        {% elsif site.data.navigation %}
+          {% assign navigation = site.data.navigation %}
+        {% endif %}
+        {% if navigation %}
+          <button class="slds-button slds-button_icon slds-button_icon-small slds-button_icon-border-filled slds-m-left_x-small" aria-expanded="false" aria-haspopup="true">
+            <svg class="slds-button__icon" aria-hidden="true">
+              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+            </svg>
+            <span class="slds-assistive-text">Toggle Navigation</span>
+          </button>
+          <ul class="slds-list_vertical slds-has-block-links-space slds-m-top_small slds-m-bottom_small">
             {% for item in navigation %}
               {% if item.menu %}
-                <li class="slds-dropdown slds-dropdown-trigger slds-dropdown_left slds-m-left_small slds-m-right_medium">
-                  <a href="#" class="slds-nav-link slds-dropdown-trigger slds-dropdown-trigger_click" aria-haspopup="true" title="{{ item.text }}">
+                <li class="slds-list_item slds-has-submenu">
+                  <a class="slds-button slds-button_icon slds-button_icon slds-button_icon-small slds-button_icon-border-filled slds-m-right_x-small" href="#" aria-haspopup="true">
                     {{ item.text }}
-                    <svg class="slds-icon slds-icon_x-small slds-icon-text-default slds-m-left_x-small slds-shrink-none" aria-hidden="true">
-                      <use xlink:href="{{ site.baseurl }}/assets/icons/utility-sprite/svg/symbols.svg#down" />
+                    <svg class="slds-button__icon slds-button__icon_x-small" aria-hidden="true">
+                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
                     </svg>
                   </a>
-                  <div class="slds-dropdown slds-dropdown_left">
-                    <ul class="slds-dropdown__list" role="menu">
-                      {% for subitem in item.menu %}
-                        {% if subitem.href %}
-                          {% if subitem.text contains '' %}
-                            {% assign subitem_text = subitem.text %}
-                          {% else %}
-                            {% assign subitem_text = site.pages | where: 'url', subitem.href | map: 'title' | first %}
-                          {% endif %}
-                          <li class="slds-dropdown__item{% if subitem.href == page.url %} slds-is-active{% endif %}" role="presentation">
-                            <a href="{{ subitem.href | relative_url }}" class="slds-dropdown__link" role="menuitem" {% if subitem.new_window %} target="_blank"{% endif %}>{{ subitem_text }}</a>
-                          </li>
-                        {% elsif subitem.text contains '---' %}
-                          <li class="slds-dropdown__divider" role="separator"></li>
+                  <ul class="slds-list_vertical slds-has-block-links-space slds-m-top_small slds-m-bottom_small slds-dropdown slds-dropdown_right">
+                    {% for subitem in item.menu %}
+                      {% if subitem.href %}
+                        {% if subitem.text contains '<br>' %}
+                          {% assign subitem_text = subitem.text | replace: '<br>', '' %}
                         {% else %}
-                          <li class="slds-dropdown__header" role="heading" aria-level="1">{{ subitem.text }}</li>
+                          {% assign subitem_text = site.pages | where: 'url', subitem.href | map: 'title' | first %}
                         {% endif %}
-                      {% endfor %}
-                    </ul>
-                  </div>
-
-
-<!-- 
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light" id="main-nav">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="{{'/' | relative_url }}">
-      {% if site.logo %}
-        <img class="me-3" src="{{ site.logo | relative_url }}" alt="{{ site.title }}">
-      {% endif %}
-      {{ site.title }}
-    </a>
-    {% if page.navigation and site.data[page.navigation] %}
-      {% assign navigation = site.data[page.navigation] %}
-    {% elsif site.data.navigation %}
-      {% assign navigation = site.data.navigation %}
-    {% endif %}
-    {% if navigation %}
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
-        Menu <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbar-menu">
-        <ul class="navbar-nav ms-auto">
-          {% for item in navigation %}
-            {% if item.menu %}
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                  {{ item.text }}
-                </a>
-                <div class="dropdown-menu dropdown-menu-end">
-                  {% for subitem in item.menu %}
-                    {% if subitem.href %}
-                      {% if subitem.text contains '' %}
-                        {% assign subitem_text = subitem.text %}
+                        <li class="slds-list-item{% if subitem.href == page.url %} slds-is-active{% endif %}">
+                          <a href="{{ subitem.href | relative_url }}"{% if subitem.new_window %} target="_blank"{% endif %}>
+                            {{ subitem_text }}
+                          </a>
+                        </li>
+                      {% elsif subitem.text contains '---' %}
+                        <li class="slds-dropdown-divider"></li>
                       {% else %}
-                        {% assign subitem_text = site.pages | where: 'url', subitem.href | map: 'title' | first %}
+                        <li class="slds-dropdown__header">{{ subitem.text }}</li>
                       {% endif %}
-                      <a class="dropdown-item{% if subitem.href == page.url %} active{% endif %}" href="{{ subitem.href | relative_url }}"{% if subitem.new_window %} target="_blank"{% endif %}>{{ subitem_text }}</a>
-                    {% elsif subitem.text contains '---' %}
-                      <div class="dropdown-divider"></div>
-                    {% else %}
-                      <h6 class="dropdown-header">{{ subitem.text }}</h6>
-                    {% endif %}
-                  {% endfor %}
-                </div>
-              </li>
-            {% else %}
-              <li class="navbar-item">
-                {% if item.text contains '' %}
-                  {% assign item_text = item.text %}
-                {% else %}
-                  {% assign item_text = site.pages | where: 'url', item.href | map: 'title' | first %}
-                {% endif %}
-                <a class="nav-link{% if item.href == page.url %} active{% endif %}" href="{{ item.href | relative_url }}"{% if item.new_window %} target="_blank"{% endif %}>{{ item_text }}</a>
-              </li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-      </div>
-    {% endif %}
-  </div>
-</nav> -->
+                    {% endfor %}
+                  </ul>
+                </li>
+              {% else %}
+                <li class="slds-list_item">
+                  {% if item.text contains '<br>' %}
+                    {% assign item_text = item.text | replace: '<br>', '' %}
+                  {% else %}
+                    {% assign item_text =
