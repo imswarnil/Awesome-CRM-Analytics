@@ -8,7 +8,7 @@ baseurl: "/Salesforce-CRM-Analytics"                   # Only required if your s
 # SOCIAL PROFILES
 social:
   email: name@example.com
-  twitter: peterdesmet
+  twitter: CRM_Analytics
   github: github_username               # Can also be a github_username/repository
   mastodon: https://mastodon.social/@mastodon_username
   facebook: https://www.facebook.com/groups/group_id/
