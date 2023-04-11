@@ -22,3 +22,14 @@ See the demo website for instructions:
 - [Markdown]({{ '/docs/markdown/' | relative_url }})
 
 <iframe src="https://www.youtube-nocookie.com/embed/aPwndqsmaGk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1291242080282540"
+     crossorigin="anonymous"></script>
+<!-- Leaderboard (980 x 90) -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:100%;max-width:980px;max-height:90px"
+     data-ad-client="ca-pub-1291242080282540"
+     data-ad-slot="8539588233"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
