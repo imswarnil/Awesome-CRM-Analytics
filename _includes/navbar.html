@@ -1,58 +1,58 @@
-<nav class="slds-navbar slds-navbar_vertical slds-shadow_medium" role="navigation">
-  <div class="slds-container slds-container_fluid">
-    <div class="slds-grid slds-grid_align-spread">
-      <div class="slds-nav-vertical slds-nav-medium slds-wrap">
-        <a class="slds-nav-vertical__action" href="{{'/' | relative_url }}">
-          {% if site.logo %}
-            <img class="slds-icon slds-icon-text-default slds-icon_x-small slds-align-middle me-1" src="{{ site.logo | relative_url }}" alt="{{ site.title }}">
-          {% endif %}
-          <span class="slds-align-middle">{{ site.title }}</span>
-        </a>
-        {% if page.navigation and site.data[page.navigation] %}
-          {% assign navigation = site.data[page.navigation] %}
-        {% elsif site.data.navigation %}
-          {% assign navigation = site.data.navigation %}
-        {% endif %}
-        {% if navigation %}
-          <button class="slds-button slds-button_icon slds-button_icon-small slds-button_icon-border-filled slds-m-left_x-small" aria-expanded="false" aria-haspopup="true">
-            <svg class="slds-button__icon" aria-hidden="true">
-              <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
-            </svg>
-            <span class="slds-assistive-text">Toggle Navigation</span>
-          </button>
-          <ul class="slds-list_vertical slds-has-block-links-space slds-m-top_small slds-m-bottom_small">
-            {% for item in navigation %}
-              {% if item.menu %}
-                <li class="slds-list_item slds-has-submenu">
-                  <a class="slds-button slds-button_icon slds-button_icon slds-button_icon-small slds-button_icon-border-filled slds-m-right_x-small" href="#" aria-haspopup="true">
-                    {{ item.text }}
-                    <svg class="slds-button__icon slds-button__icon_x-small" aria-hidden="true">
-                      <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
-                    </svg>
-                  </a>
-                  <ul class="slds-list_vertical slds-has-block-links-space slds-m-top_small slds-m-bottom_small slds-dropdown slds-dropdown_right">
-                    {% for subitem in item.menu %}
-                      {% if subitem.href %}
-                        {% if subitem.text contains '<br>' %}
-                          {% assign subitem_text = subitem.text | replace: '<br>', '' %}
-                        {% else %}
-                          {% assign subitem_text = site.pages | where: 'url', subitem.href | map: 'title' | first %}
-                        {% endif %}
-                        <li class="slds-list-item{% if subitem.href == page.url %} slds-is-active{% endif %}">
-                          <a href="{{ subitem.href | relative_url }}"{% if subitem.new_window %} target="_blank"{% endif %}>
-                            {{ subitem_text }}
-                          </a>
-                        </li>
-                      {% elsif subitem.text contains '---' %}
-                        <li class="slds-dropdown-divider"></li>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="main-nav">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="{{'/' | relative_url }}">
+      {% if site.logo %}
+        <img class="me-3" src="{{ site.logo | relative_url }}" alt="{{ site.title }}">
+      {% endif %}
+      {{ site.title }}
+    </a>
+    {% if page.navigation and site.data[page.navigation] %}
+      {% assign navigation = site.data[page.navigation] %}
+    {% elsif site.data.navigation %}
+      {% assign navigation = site.data.navigation %}
+    {% endif %}
+    {% if navigation %}
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
+        Menu <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-menu">
+        <ul class="navbar-nav ms-auto">
+          {% for item in navigation %}
+            {% if item.menu %}
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                  {{ item.text }}
+                </a>
+                <div class="dropdown-menu dropdown-menu-end">
+                  {% for subitem in item.menu %}
+                    {% if subitem.href %}
+                      {% if subitem.text contains '' %}
+                        {% assign subitem_text = subitem.text %}
                       {% else %}
-                        <li class="slds-dropdown__header">{{ subitem.text }}</li>
+                        {% assign subitem_text = site.pages | where: 'url', subitem.href | map: 'title' | first %}
                       {% endif %}
-                    {% endfor %}
-                  </ul>
-                </li>
-             </ul>
-             </div>
-             </div>
-             </div>
-             </nav>
+                      <a class="dropdown-item{% if subitem.href == page.url %} active{% endif %}" href="{{ subitem.href | relative_url }}"{% if subitem.new_window %} target="_blank"{% endif %}>{{ subitem_text }}</a>
+                    {% elsif subitem.text contains '---' %}
+                      <div class="dropdown-divider"></div>
+                    {% else %}
+                      <h6 class="dropdown-header">{{ subitem.text }}</h6>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              </li>
+            {% else %}
+              <li class="navbar-item">
+                {% if item.text contains '' %}
+                  {% assign item_text = item.text %}
+                {% else %}
+                  {% assign item_text = site.pages | where: 'url', item.href | map: 'title' | first %}
+                {% endif %}
+                <a class="nav-link{% if item.href == page.url %} active{% endif %}" href="{{ item.href | relative_url }}"{% if item.new_window %} target="_blank"{% endif %}>{{ item_text }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  </div>
+</nav>
