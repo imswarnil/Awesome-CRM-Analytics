@@ -16,20 +16,7 @@ permalink: /
 See the demo website for instructions:
 
 
-
 - [Installation]({{ '/docs/installation/' | relative_url }})
 - [Configuration]({{ '/docs/configuration/' | relative_url }})
 - [Markdown]({{ '/docs/markdown/' | relative_url }})
 
-
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1291242080282540"
-     crossorigin="anonymous"></script>
-<!-- Leaderboard (980 x 90) -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:980px;height:90px"
-     data-ad-client="ca-pub-1291242080282540"
-     data-ad-slot="8539588233"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
