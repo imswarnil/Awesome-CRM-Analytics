@@ -1,21 +1,21 @@
 # SITE SETTINGS
-title: Petridish                        # Title in top navigation bar (navbar) and <head>
-author: Peter Desmet                    # Used for copyright statement in footer
+title: Salesforce CRM Analytics Training                       # Title in top navigation bar (navbar) and <head>
+author: Swarnil Singhai                    # Used for copyright statement in footer
 baseurl: ""                   # Only required if your site is in a directory e.g. https://username.github.io/sitename
 url: "http://salesforce-crm-analytics-training.imswarnil.com" (no slash) and baseurl: "/sitename" (leading slash)
                                         # A baseurl affects internal links, see http://peterdesmet.github.io/petridish/markdown/#links
 
 # SOCIAL PROFILES
 social:
-  email: name@example.com
+  email: crmanalytics@imswarnil.com
   twitter: CRM_Analytics
-  github: github_username               # Can also be a github_username/repository
-  mastodon: https://mastodon.social/@mastodon_username
-  facebook: https://www.facebook.com/groups/group_id/
+  github: imswarnil              # Can also be a github_username/repository
+  linkedin: https://www.linkedin.com/in/imswarnil/
+  instagram : https://www.instagram.com/imswarnil/
   disqus: hashtag-swarnil-yt               # Enable Disqus comments from disqus_sitename.disqus.com
 
 # THEME SETTINGS (ALL OPTIONAL)
-posts_on_home: 3                        # Show x number of latest posts on homepage, can be 0
+posts_on_home: 6                       # Show x number of latest posts on homepage, can be 0
 tweets_on_home: true                    # Show Twitter feed of social.twitter on homepage
 archive_permalink: /blog/               # Permalink of page using the archive.html layout, required when using post tags
 github_edit: true                       # Show an "edit this page" link in the footer, can also be name of branch (default: main)
