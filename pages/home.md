@@ -22,8 +22,7 @@ Learn the basics of [CRM Analytics](https://www.tableau.com/products/crm-analyti
 
  is a Jekyll theme for research project websites. Or your personal blog or lab website. 👩‍🔬 It's mobile-friendly (thanks to [Bootstrap 5](https://getbootstrap.com/docs/5.1/)), free, easy to customize, and designed to work well with [GitHub Pages](https://pages.github.com/).
 
-{% include video-card.html video_title="My Awesome Video" video_url="https://www.youtube.com/watch?v=dQw4w9WgXcQ" %}
-
+ {% include ads.html %}
 
 ## Installation
 
