@@ -1,8 +1,8 @@
 # SITE SETTINGS
 title: Petridish                        # Title in top navigation bar (navbar) and <head>
 author: Peter Desmet                    # Used for copyright statement in footer
-baseurl: "/Salesforce-CRM-Analytics"                   # Only required if your site is in a directory e.g. https://username.github.io/sitename
-                                        # which has url: "https://username.github.io" (no slash) and baseurl: "/sitename" (leading slash)
+baseurl: ""                   # Only required if your site is in a directory e.g. https://username.github.io/sitename
+url: "http://salesforce-crm-analytics-training.imswarnil.com" (no slash) and baseurl: "/sitename" (leading slash)
                                         # A baseurl affects internal links, see http://peterdesmet.github.io/petridish/markdown/#links
 
 # SOCIAL PROFILES
