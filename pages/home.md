@@ -29,6 +29,14 @@ Learn the basics of [CRM Analytics](https://www.tableau.com/products/crm-analyti
 
 See the demo website for instructions:
 
+<div style="display: flex; align-items: center;">
+  <div style="font-size: 48px; margin-right: 16px;">📉</div>
+  <div>
+    <h2 style="margin: 0;"><a href="{{ '/docs/installation/' | relative_url }}">Redirect Link</a></h2>
+    <p style="margin: 0;">Click the link above to be redirected.</p>
+  </div>
+</div>
+
 
 - [Installation]({{ '/docs/installation/' | relative_url }})
 - [Configuration]({{ '/docs/configuration/' | relative_url }})
