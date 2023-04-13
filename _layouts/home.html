@@ -8,13 +8,15 @@ remark: See also page.layout == 'home' in head.html and header.html.
   {% assign two_col = true %}
 {% endif %}
 
+
 <div class="row">
   <div class="{% if two_col %}col{% else %}col-md-10 col-lg-8 mx-auto{% endif %}">
     <div class="row">
       <div class="col">
+        <h1 itemprop="name">CRM Analytics Training for Salesforce</h1>
+<p itemprop="description">Learn the basics of CRM Analytics with our Salesforce-focused training course. Gain the skills to analyze your CRM data, create effective dashboards, and optimize your sales strategies. Our comprehensive course covers everything from data handling and visualization to real-time analytics and best practices. Start your CRM Analytics journey today!</p>
 
         {{ content }}
-
       </div>
 
       {% if two_col %}
