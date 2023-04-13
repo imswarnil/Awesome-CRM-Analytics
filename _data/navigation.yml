@@ -8,9 +8,12 @@
   href: /team/
 - text: Blog
   href: /blog/
-- text: Documentation
+- text: GitHub
+  href: https://github.com/peterdesmet/petridish/
+  new_window: true
+- text: Training
   menu: # Dropdown menu (one level deep only)
-  - text: Installation
+  - text: Getting Started
     href: /docs/installation/
   - text: Configuration
     href: /docs/configuration/
@@ -19,6 +22,4 @@
   - text: "Dropdown header" # Title for block of menu items
   - text: Page with custom navigation
     href: /docs/custom-navigation/
-- text: GitHub
-  href: https://github.com/peterdesmet/petridish/
-  new_window: true
+
