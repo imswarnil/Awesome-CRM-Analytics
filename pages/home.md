@@ -41,3 +41,44 @@ See the demo website for instructions:
 - [Configuration]({{ '/docs/configuration/' | relative_url }})
 - [Markdown]({{ '/docs/markdown/' | relative_url }})
 
+
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px;">
+  <div style="flex-basis: calc(33.33% - 16px); max-width: calc(33.33% - 16px); display: flex; align-items: center; background-color: #f1f1f1; padding: 16px; border-radius: 8px;">
+    <div style="font-size: 48px; margin-right: 16px;">📉</div>
+    <div>
+      <h2 style="margin: 0;"><a href="#">Redirect Link</a></h2>
+      <p style="margin: 0;">Click the link above to be redirected.</p>
+    </div>
+  </div>
+  <div style="flex-basis: calc(33.33% - 16px); max-width: calc(33.33% - 16px); display: flex; align-items: center; background-color: #f1f1f1; padding: 16px; border-radius: 8px;">
+    <div style="font-size: 48px; margin-right: 16px;">📉</div>
+    <div>
+      <h2 style="margin: 0;"><a href="#">Redirect Link</a></h2>
+      <p style="margin: 0;">Click the link above to be redirected.</p>
+    </div>
+  </div>
+  <div style="flex-basis: calc(33.33% - 16px); max-width: calc(33.33% - 16px); display: flex; align-items: center; background-color: #f1f1f1; padding: 16px; border-radius: 8px;">
+    <div style="font-size: 48px; margin-right: 16px;">📉</div>
+    <div>
+      <h2 style="margin: 0;"><a href="#">Redirect Link</a></h2>
+      <p style="margin: 0;">Click the link above to be redirected.</p>
+    </div>
+  </div>
+</div>
+
+<style>
+    @media only screen and (max-width: 768px) {
+  div[style*="flex-basis"] {
+    flex-basis: calc(50% - 16px);
+    max-width: calc(50% - 16px);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  div[style*="flex-basis"] {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+    </style>
