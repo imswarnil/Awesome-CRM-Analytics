@@ -1,6 +1,6 @@
 # Salesforce CRM Analytics Training [![screenshot](https://github.com/imswarnil/Salesforce-CRM-Analytics-Training/blob/main/assets/theme/images/favicon.ico)](https://salesforce-crm-analytics-training.imswarnil.com)
 
-Petridish is a Jekyll theme for research project websites. Or your personal blog or lab website. 👩‍🔬 It's mobile-friendly (thanks to [Bootstrap 5](https://getbootstrap.com/docs/5.1/)), free, easy to customize, and designed to work well with [GitHub Pages](https://pages.github.com/).
+Learn Salesforce CRM Analytics FKA Tableau CRM from scratch and become an expert in CRM analytics with our tutorials. Our CRM Analytics tutorial blog is designed to teach you all concepts and help you build your own CRM analytics app. 👩‍🔬 It's mobile-friendly (thanks to [Bootstrap 5](https://getbootstrap.com/docs/5.1/)), free, easy to customize, and designed to work well with [GitHub Pages](https://pages.github.com/).
 
 ## Installation
 
