@@ -6,11 +6,11 @@ Welcome to the open-source project for learning Salesforce CRM Analytics (former
 
 Our CRM Analytics tutorial blog is mobile-friendly, free, easy to customize, and designed to work well with GitHub Pages. You will learn about the basic terms of CRM analytics, terminology, initial setup, creating datasets, dataset practice, intro lens exploration, designing dashboards, creating dataflows, dataflow transformation, recipes, recipe functions, SAQL, bindings, compare tables, chart type, designer layer, configuring dashboard, layout, and mobile responsiveness, embedding dashboards, connecting data sources, dashboard pages, custom GeoJSON, data sync, dataset best practices, dataset XMD, editing dataflow and recipe, dataset security, deployment, migrating assets, performance tips, Einstein Discovery, Story, AI, and ML.
 
-| Chapter Number 	| Chapter Title                 	| Link 	| Topics 	| Time 	|
-|----------------	|-------------------------------	|------	|--------	|------	|
-| 1              	| Introduction to CRM Analytics 	|      	|        	|      	|
-|                	|                               	|      	|        	|      	|
-|                	|                               	|      	|        	|      	|
+| S.No.| Chapter Title                 	| Link 	| Topics 	          | Time 	|
+|------|-------------------------------	|------	|-------------------|------	|
+| 1    | Introduction to CRM Analytics 	|      	| `assets/images/`  |      	|
+|      |                               	|      	|                 	|       |
+|      |                               	|      	|                 	|     	|
 
 ## Installation
 
