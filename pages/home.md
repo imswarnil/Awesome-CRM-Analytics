@@ -9,6 +9,12 @@ permalink: /
 # CRM Analytics Training for Salesforce
 Learn the basics of [CRM Analytics](https://www.tableau.com/products/crm-analytics) 📉 with our Salesforce-focused training course. Gain the skills to analyze your CRM data, create effective dashboards, and optimize your sales strategies. Our comprehensive course covers everything from data handling and visualization to real-time analytics and best practices. Start your CRM Analytics journey today!
 
+| S.No.| Chapter Title                 	      | Link 	                                          | Topics 	          |  ⏰ Time 	 |
+|------|------------------------------------- |-------------------------------------------------|-------------------|------------ |
+| 1    | Introduction to CRM Analytics 	      | [Ziad Fayad](https://www.linkedin.com/in/z4data)| `assets/images/`  |   31:38     |
+|      |                               	      |      	                                          |                 	|             |
+|      |                               	      |      	                                          |                 	|     	      |
+
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1291242080282540"
      crossorigin="anonymous"></script>
 <!-- The Leaderboard (728×90) -->
