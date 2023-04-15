@@ -1,10 +1,10 @@
 # Salesforce CRM Analytics Training [![screenshot](https://github.com/imswarnil/Salesforce-CRM-Analytics-Training/blob/main/assets/theme/images/favicon.ico)](https://salesforce-crm-analytics-training.imswarnil.com)
 
-Welcome to the open-source project for learning Salesforce CRM Analytics (formerly known as Tableau CRM) from scratch. This project is based on a free YouTube training series by [Ziad Fayad](https://www.linkedin.com/in/z4data), Director of CRM Analytics Cloud at Salesforce, and is designed to provide step-by-step guidance through the entire process of building your own CRM analytics app.
+Welcome to the open-source project for learning Salesforce CRM Analytics (formerly known as Tableau CRM) from scratch. This project is based on a free YouTube training series by [Ziad Fayad](https://www.linkedin.com/in/z4data), Ex-Director of CRM Analytics Cloud at Salesforce, and is designed to provide step-by-step guidance through the entire process of building your own CRM analytics app.
 
+## Overview 
 
-
-Learn Salesforce CRM Analytics FKA Tableau CRM from scratch and become an expert in CRM analytics with our tutorials. Our CRM Analytics tutorial blog is designed to teach you all concepts and help you build your own CRM analytics app. 👩‍🔬 It's mobile-friendly (thanks to [Bootstrap 5](https://getbootstrap.com/docs/5.1/)), free, easy to customize, and designed to work well with 
+Our CRM Analytics tutorial blog is mobile-friendly, free, easy to customize, and designed to work well with GitHub Pages. You will learn about the basic terms of CRM analytics, terminology, initial setup, creating datasets, dataset practice, intro lens exploration, designing dashboards, creating dataflows, dataflow transformation, recipes, recipe functions, SAQL, bindings, compare tables, chart type, designer layer, configuring dashboard, layout, and mobile responsiveness, embedding dashboards, connecting data sources, dashboard pages, custom GeoJSON, data sync, dataset best practices, dataset XMD, editing dataflow and recipe, dataset security, deployment, migrating assets, performance tips, Einstein Discovery, Story, AI, and ML.
 
 ## Installation
 
