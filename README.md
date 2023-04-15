@@ -5,11 +5,11 @@ Welcome to the open-source project for learning Salesforce CRM Analytics (former
 ## Tutorial Series 📂 
 
 
-| S.No.| Chapter Title                 	| Link 	| Topics 	          | Time 	|
-|------|-------------------------------	|------	|-------------------|------	|
-| 1    | Introduction to CRM Analytics 	|      	| `assets/images/`  |      	|
-|      |                               	|      	|                 	|       |
-|      |                               	|      	|                 	|     	|
+| S.No.| Chapter Title                 	      | Link 	                                          | Topics 	          | Time 	|
+|------|------------------------------------- |-------------------------------------------------|-------------------|------	|
+| 1    | Introduction to CRM Analytics 	      | [Ziad Fayad](https://www.linkedin.com/in/z4data)| `assets/images/`  |      	|
+|      |                               	      |      	                                          |                 	|       |
+|      |                               	      |      	                                          |                 	|     	|
 
 ## Installation
 
