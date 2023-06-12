@@ -1,50 +1,5 @@
 {% comment %}background is defined in head.html{% endcomment %}
 {% if background %}
-  <header class="slds-page-header slds-page-header_image" style="background-image: url('{{ background | relative_url }}')">
-{% else %}
-  <header class="slds-page-header slds-page-header_image bg-no-image">
-{% endif %}
-    <div class="slds-container">
-      <div class="slds-grid">
-        <div class="slds-col slds-size_1-of-1 slds-size_2-of-3 slds-medium-size_1-of-2 slds-medium-size_2-of-3 slds-large-size_2-of-3 slds-medium-size_order-1">
-          <h1{% if page.layout == 'home' %} class="home"{% endif %}>{{ page.title }}</h1>
-          
-          <div class="slds-text-longform slds-m-vertical_small">{{ page.description | markdownify }}</div>
-          
-          {% if page.collection == 'posts' %}
-            <p class="slds-text-body_small slds-m-vertical_x-small">
-              <time>{{ page.date | date: '%B %d, %Y' }}</time>
-              {% if page.author or page.authors %}
-                &bull; {{ page.author | join: ', ' }}{{ page.authors | join: ', ' }}
-              {% endif %}
-            </p>
-          {% endif %}
-
-          <div class="slds-tags">
-            {% if page.collection == 'posts' and page.tags and site.archive_permalink %}
-              {% for tag in page.tags %}
-              <a class="slds-badge{% if site.rounded_corners != false %} slds-badge_round{% endif %}" href="{{ site.archive_permalink | relative_url }}?tag={{ tag | url_encode }}">{{ tag }}</a>
-              {% endfor %}
-            {% endif %}
-          </div>
-        </div>
-      </div>
-    </div>
-    {% if page.background.img and page.background.by %}
-      <div class="slds-page-header__detail">
-        {% if page.background.href %}
-          Image by <a href="{{ page.background.href }}">{{ page.background.by }}</a>
-        {% else %}
-          Image by {{ page.background.by }}
-        {% endif %}
-      </div>
-    {% endif %}
-  </header>
-
-
-
-<!-- {% comment %}background is defined in head.html{% endcomment %}
-{% if background %}
   <header class="header bg-image" style="background-image: url('{{ background | relative_url }}')">
 {% else %}
   <header class="header bg-no-image">
@@ -84,4 +39,4 @@
         {% endif %}
       </div>
     {% endif %}
-  </header> -->
+  </header>
