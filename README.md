@@ -2,8 +2,6 @@
 
 Welcome to the open-source project for learning Salesforce CRM Analytics (formerly known as Tableau CRM) from scratch. This project is based on a free YouTube training series by [Ziad Fayad](https://www.linkedin.com/in/z4data), Ex-Director of CRM Analytics Cloud at Salesforce, and is designed to provide step-by-step guidance through the entire process of building your own CRM analytics app.
 
- {% include header.html %}
-
 
 ## Tutorial Series 📂 
 
