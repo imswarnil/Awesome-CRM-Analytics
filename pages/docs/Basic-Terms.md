@@ -45,6 +45,9 @@ This method gives you a copy of the Petridish repository and website. You can th
     screenshot.png
     ```
 
+    {% include youtube.html video="iRuJufELrWo" starttime=10 endtime=15 vtitle="This is a demo video" description="Bootstrap Video Demonstration for my project" category="Education" requiresSubscription="Free" %}
+
+
 ## Install Petridish as gem-based theme
 
 If you do not what to use `remote_theme`, see the [Jekyll documentation](https://jekyllrb.com/docs/themes/#understanding-gem-based-themes) to install (gem-based) themes.
