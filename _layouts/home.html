@@ -8,12 +8,11 @@ remark: See also page.layout == 'home' in head.html and header.html.
   {% assign two_col = true %}
 {% endif %}
 
-
 <div class="row">
   <div class="{% if two_col %}col{% else %}col-md-10 col-lg-8 mx-auto{% endif %}">
     <div class="row">
       <div class="col">
-           {{ content }}
+        {{ content }}
       </div>
 
       {% if two_col %}
@@ -25,7 +24,7 @@ remark: See also page.layout == 'home' in head.html and header.html.
         </div>
       {% endif %}
     </div>
-    
+
     {% if site.posts_on_home > 0 %}
       <div class="row cards mt-4">
         {% for item in site.posts limit:site.posts_on_home %}
@@ -36,19 +35,132 @@ remark: See also page.layout == 'home' in head.html and header.html.
       </div>
     {% endif %}
 
+    <div class="container">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1291242080282540" crossorigin="anonymous"></script>
+      <!-- Leaderboard (980 x 90) -->
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:980px;height:90px"
+           data-ad-client="ca-pub-1291242080282540"
+           data-ad-slot="8539588233"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+  </div>
+</div>
 
-
-<div class="container">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1291242080282540"
-crossorigin="anonymous"></script>
-<!-- Leaderboard (980 x 90) -->
-<ins class="adsbygoogle"
-style="display:inline-block;width:980px;height:90px"
-data-ad-client="ca-pub-1291242080282540"
-data-ad-slot="8539588233"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "{{ page.title }}",
+  "description": "{{ page.description }}",
+  "mainEntity": {
+    "@type": "VideoObject",
+    "name": "Introduction to CRM Analytics",
+    "description": "An introductory video on CRM Analytics.",
+    "thumbnailUrl": "https://example.com/path/to/thumbnail.jpg",
+    "uploadDate": "2023-06-12",
+    "contentUrl": "https://example.com/path/to/video.mp4",
+    "duration": "PT1M30S"
+  },
+  "course": {
+    "@type": "Course",
+    "name": "CRM Analytics Course",
+    "description": "A comprehensive course on CRM analytics.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Your Course Provider"
+    },
+    "startDate": "2023-07-01",
+    "endDate": "2023-08-30",
+    "duration": "P2M"
+  },
+  "resources": {
+    "@type": "CreativeWork",
+    "name": "CRM Analytics Resources",
+    "description": "A collection of resources for learning CRM analytics.",
+    "url": "https://example.com/crm-analytics/resources"
+  },
+  "links": [
+    {
+      "@type": "WebPage",
+      "name": "CRM Analytics Blog",
+      "url": "https://example.com/crm-analytics/blog"
+    },
+    {
+      "@type": "WebPage",
+      "name": "CRM Analytics Bootcamp",
+      "url": "https://example.com/crm-analytics/bootcamp"
+    }
+  ],
+  "menu": {
+    "@type": "Menu",
+    "name": "CRM Analytics Menu",
+    "hasMenuSection": [
+      {
+        "@type": "MenuSection",
+        "name": "Courses",
+        "hasMenuItem": [
+          {
+            "@type": "MenuItem",
+            "name": "Beginner Level Course",
+            "url": "https://example.com/crm-analytics/courses/beginner"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "Advanced Level Course",
+            "url": "https://example.com/crm-analytics/courses/advanced"
+          }
+        ]
+      },
+      {
+        "@type": "MenuSection",
+        "name": "Training",
+        "hasMenuItem": [
+          {
+            "@type": "MenuItem",
+            "name": "Online Training",
+            "url": "https://example.com/crm-analytics/training/online"
+          },
+          {
+            "@type": "MenuItem",
+            "name": "In-Person Training",
+            "url": "https://example.com/crm-analytics/training/in-person"
+          }
+        ]
+      }
+    ]
+  },
+  "projectImage": {
+    "@type": "ImageObject",
+    "name": "CRM Analytics Project",
+    "description": "An image showcasing a CRM analytics project",
+    "url": "https://example.com/path/to/project-image.jpg",
+    "height": "800",
+    "width": "1200"
+  },
+  "stepwiseStep": {
+    "@type": "HowTo",
+    "name": "Stepwise Guide to Learn CRM Analytics",
+    "description": "A step-by-step guide to learning CRM analytics",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Step 1: Introduction to CRM Analytics",
+        "url": "https://example.com/crm-analytics/step1"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Step 2: Data Collection and Cleaning",
+        "url": "https://example.com/crm-analytics/step2"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Step 3: Data Analysis and Visualization",
+        "url": "https://example.com/crm-analytics/step3"
+      }
+    ]
+  }
+}
 </script>
-</div>
-  
-</div>
