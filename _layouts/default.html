@@ -2,26 +2,6 @@
 layout: base
 description: Default template for pages and posts, with contained width.
 ---
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "description": "{{ page.description | escape }}",
-  "mainEntity": {
-    "@type": "WebPageElement",
-    "name": "{{ page.title | escape }}",
-    "headline": "{{ page.title | escape }}",
-    "text": "{{ content | strip_html | escape }}"
-  },
-  "url": "{{ page.url | absolute_url }}",
-  "isPartOf": {
-    "@type": "Website",
-    "name": "{{ site.title | escape }}",
-    "url": "{{ site.url | absolute_url }}"
-  }
-}
-</script>
-
 <div class="row">
   {% if page.toc %}
   <div class="col-md-10 col-lg-3 mx-auto">
@@ -58,3 +38,23 @@ description: Default template for pages and posts, with contained width.
     {% endif %}
   </div>
 </div>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "description": "{{ page.description | escape }}",
+    "mainEntity": {
+      "@type": "WebPageElement",
+      "name": "{{ page.title | escape }}",
+      "headline": "{{ page.title | escape }}",
+      "text": "{{ content | strip_html | escape }}"
+    },
+    "url": "{{ page.url | absolute_url }}",
+    "isPartOf": {
+      "@type": "Website",
+      "name": "{{ site.title | escape }}",
+      "url": "{{ site.url | absolute_url }}"
+    }
+  }
+  </script>
