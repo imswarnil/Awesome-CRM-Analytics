@@ -1,0 +1,27 @@
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" 
+          src="https://www.youtube.com/embed/{{ include.video }}?start={{ include.starttime | default: 0 }}&end={{ include.endtime }}&showinfo=0"
+          frameborder="0"
+          allowfullscreen
+  >
+  </iframe>
+</div>
+
+{% assign vtitle = include.vtitle | default: "Video Title" %}
+{% assign vdescription = include.description | default: "Video Description" %}
+{% assign vcategory = include.category | default: "Education" %}
+{% assign vrequiresSubscription = include.requiresSubscription | default: "Free" %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "{{ vtitle }}",
+  "description": "{{ vdescription }}",
+  "thumbnailUrl": "https://img.youtube.com/vi/{{ include.video }}/hqdefault.jpg",
+  "contentUrl": "https://www.youtube.com/watch?v={{ include.video }}",
+  "duration": "PT{{ include.endtime | minus: include.starttime }}M",
+  "genre": "{{ vcategory }}",
+  "requiresSubscription": "{{ vrequiresSubscription }}"
+}
+</script>
