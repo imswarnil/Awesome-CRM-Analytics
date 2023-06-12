@@ -45,8 +45,7 @@ This method gives you a copy of the Petridish repository and website. You can th
     screenshot.png
     ```
 
-    {% include video.html video="iRuJufELrWo" starttime=10 endtime=15 vtitle="This is a demo video" description="Bootstrap Video Demonstration for my project" category="Education" requiresSubscription="Free" %}
-
+{% include video.html video="iRuJufELrWo" starttime=10 endtime=15 vtitle="This is a demo video" description="Bootstrap Video Demonstration for my project" category="Education" requiresSubscription="Free" %}
 
 ## Install Petridish as gem-based theme
 

@@ -5,10 +5,7 @@
             frameborder="0"
             allowfullscreen
     ></iframe>
-  </div>
-</div>
-
-{% assign vtitle = include.vtitle | default: "Video Title" %}
+    {% assign vtitle = include.vtitle | default: "Video Title" %}
 {% assign vdescription = include.description | default: "Video Description" %}
 {% assign vcategory = include.category | default: "Education" %}
 {% assign vrequiresSubscription = include.requiresSubscription | default: "Free" %}
@@ -27,6 +24,10 @@
   "requiresSubscription": "{{ vrequiresSubscription }}"
 }
 </script>
+  </div>
+</div>
+
+
 
 <style>
 .youtube-container {
