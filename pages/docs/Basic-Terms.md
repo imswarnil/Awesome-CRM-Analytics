@@ -1,6 +1,6 @@
 ---
-title: Basic Terms 
-description: How to start your website and use Petridish.
+title : What Is CRM Analytics - The Introduction  
+description: Discover what is CRM Analytics with our introductory in day 1 of your crm analytics training. Learn What is Tableau CRM Analytics with example. 
 background:
   img: https://images.unsplash.com/photo-1609456878306-592aa2bc0eed?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTJ8fGJpcmRzfGVufDB8MHwwfHw%3D&auto=format&fit=crop&crop=top&w=1200&h=600&q=80
   by: William Foley

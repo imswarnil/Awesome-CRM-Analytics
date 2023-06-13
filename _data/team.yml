@@ -15,6 +15,7 @@
 
 - name: Turanga Leela
   role: Captain
+  image: https://media.licdn.com/dms/image/C4D03AQFca5hj01AGyQ/profile-displayphoto-shrink_800_800/0/1618316979868?e=2147483647&v=beta&t=iCltqUrvSzjRSbqwSahMbx12yj2KKEzRTbaJFszH_ZA
   description: >
     Mutant cyclops. Leela is spaceship captain, pilot, and head of all 
     aviation services on board the [Planet Express Ship](https://en.wikipedia.org/wiki/Planet_Express_Ship). 
