@@ -1,5 +1,5 @@
 # SITE SETTINGS
-title: Awesome CRM Analytics                           # Title in top navigation bar (navbar) and <head>
+title: Awesome Salesforce                        # Title in top navigation bar (navbar) and <head>
 author: Swarnil Singhai                                # Used for copyright statement in footer
 baseurl: ""                                            # Only required if your site is in a directory e.g. https://username.github.io/sitename
 url: "https://http://crmanalytics.imswarnil.com/"      # A baseurl affects internal links, see http://peterdesmet.github.io/petridish/markdown/#links
