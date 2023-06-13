@@ -22,4 +22,8 @@
   - text: "Dropdown header" # Title for block of menu items
   - text: Page with custom navigation
     href: /docs/custom-navigation/
+  - text: new page
+    href: /training/installation
+    
+    
 
