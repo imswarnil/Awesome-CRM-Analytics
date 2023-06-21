@@ -3,81 +3,6 @@ layout: default
 description: Template for team page.
 ---
 
-## List of Amazing Salesforce Blogs
-
-Description of the blogs goes here.
-
-{% if site.data.team %}
-  {% assign team = site.data.team %}
-{% endif %}
-
-{{ content }}
-
-<h1>List of Team Members</h1>
-<p>Description of the team goes here.</p>
-
-<!-- Team Filters -->
-<div class="mb-3">
-  <label for="team-filter" class="form-label">Filter by Role:</label>
-  <select id="team-filter" class="form-select">
-    <option value="all">All</option>
-    {% for member in team %}
-      {% if member.role %}
-        <option value="{{ member.role }}">{{ member.role }}</option>
-      {% endif %}
-    {% endfor %}
-  </select>
-</div>
-
-<!-- Team List -->
-{% for member in team %}
-  <div class="d-flex team-member" data-role="{{ member.role }}">
-    <div class="flex-shrink-0 me-3">
-      {% if member.image %}
-        <img src="{{ member.image | relative_url }}" alt="{{ member.name }}">
-      {% endif %}
-    </div>
-    <div>
-      <h5 id="{{ member.name | strip | url_encode }}">
-        {{ member.name }}
-        {% if member.role %}
-          <small class="text-muted">| {{ member.role }}</small>
-        {% endif %}
-      </h5>
-      {{ member.description | markdownify }}
-    </div>
-  </div>
-{% endfor %}
-
-<script>
-  // Filter team members based on selected role
-  document.getElementById('team-filter').addEventListener('change', function () {
-    var selectedRole = this.value;
-
-    if (selectedRole === 'all') {
-      // Show all team members
-      document.querySelectorAll('.team-member').forEach(function (member) {
-        member.style.display = 'block';
-      });
-    } else {
-      // Filter team members based on selected role
-      document.querySelectorAll('.team-member').forEach(function (member) {
-        var memberRole = member.getAttribute('data-role');
-        if (memberRole === selectedRole) {
-          member.style.display = 'block';
-        } else {
-          member.style.display = 'none';
-        }
-      });
-    }
-  });
-</script>
-
-<!--
-layout: default
-description: Template for team page.
----
-
 {% if page.team and site.data[page.team] %}
   {% assign team = site.data[page.team] %}
 {% elsif site.data.team %}
@@ -148,4 +73,4 @@ description: Template for team page.
       </ul>
     </div>
   </div>
-{% endfor %} -->
+{% endfor %}
