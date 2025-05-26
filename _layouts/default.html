@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body>
+  <section class="section">
+    <div class="container content">
+      <h1 class="title is-2 has-text-primary">{{ site.title }}</h1>
+      <h2 class="subtitle is-4">{{ site.description }}</h2>
+      {{ content }}
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>
+        <a href="https://github.com/{{ site.github.repository_nwo }}">GitHub Repo</a>
+        &middot; Powered by <a href="https://jekyllrb.com/">Jekyll</a> & Bulma
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
