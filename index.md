@@ -1,4 +1,4 @@
-# Awesome CRM Analytics [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# Awesome CRM Analytics By Swarnil [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 A curated list of the best resources, tools, and inspiration for CRM analytics.
 
