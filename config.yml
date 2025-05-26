@@ -1,0 +1,17 @@
+title: "Awesome CRM Analytics"
+description: "A curated list of the best CRM analytics resources."
+theme: minima
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# GitHub Pages
+url: "https://imswarnil.github.io"
+baseurl: "/awesome-analytics"
+permalink: pretty
+
+sass:
+  sass_dir: _sass
+  style: compressed
