@@ -38,46 +38,11 @@ A curated list of the best resources, tools, and inspiration for CRM analytics.
 - [Awesome Business Intelligence](https://github.com/awesome-jobs/awesome-business-intelligence)
 
 ---
-layout: default
-title: "Awesome CRM Analytics"
----
 
-<div id="filter-bar" class="field is-grouped is-grouped-multiline">
-  <!-- Filter buttons will be inserted here by JS -->
-</div>
+## Contributing
 
-<div id="resource-list">
-  {% for r in site.data.resources %}
-    <div class="box resource-card" data-category="{{ r.category }}">
-      <span class="icon">{{ r.icon }}</span>
-      <a href="{{ r.url }}" target="_blank"><strong>{{ r.title }}</strong></a>
-      <p>{{ r.description }}</p>
-    </div>
-  {% endfor %}
-</div>
+Contributions welcome! Please check [contributing guidelines](CONTRIBUTING.md) first.
 
-<script>
-  // Filter logic: collect categories, make buttons, show/hide .resource-card
-  document.addEventListener("DOMContentLoaded", function() {
-    const cards = document.querySelectorAll('.resource-card');
-    const categories = Array.from(new Set(Array.from(cards).map(c => c.dataset.category)));
-    const filterBar = document.getElementById('filter-bar');
-    categories.forEach(cat => {
-      const btn = document.createElement('button');
-      btn.className = "button is-small";
-      btn.innerText = cat;
-      btn.onclick = function() {
-        cards.forEach(card => {
-          card.style.display = (card.dataset.category === cat) ? "" : "none";
-        });
-      };
-      filterBar.appendChild(btn);
-    });
-    // Add a reset button
-    let reset = document.createElement('button');
-    reset.className = "button is-small is-light";
-    reset.innerText = "Show All";
-    reset.onclick = function() { cards.forEach(card => card.style.display = ""); };
-    filterBar.appendChild(reset);
-  });
-</script>
+## License
+
+[CC0 1.0 Universal (CC0 1.0) Public Domain Dedication](LICENSE)
